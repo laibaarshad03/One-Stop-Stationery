@@ -1,18 +1,16 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Footer = () => {
+function Footer() {
     return (
         <div style={{ backgroundColor: "#e8a18e", minHeight: "30vh" }}>
             <Container>
-                <Row >
+                <Row>
                     <Col style={{ marginTop: "20px" }} md={5} sm={12} lg={5}>
-                        <h4 className="boldFonts"><b>Fitnetic</b></h4>
+                        <h4 className="boldFonts"><b>One Stop Stationary</b></h4>
                         <p style={{ marginTop: "20px" }} className="lightFonts">
-                            Fitnetic provides you with complete set of workout and diet plans of
-                            different types as per your requirements. It will allow you to
-                            choose a specific fitness goal and based on this fitness goal,
-                            suitable exercises and meal plans will be suggested to you.
+                            One Stop Stationary provides you with a single stop to purchase any kind of stationary item. An online shopping cart at your service.
                         </p>
                     </Col>
                     <Col style={{ marginTop: "20px", textAlign: "left" }} md={3} sm={3} lg={3}>
@@ -20,14 +18,14 @@ const Footer = () => {
                         <Row style={{ marginTop: "20px" }} className="lightFonts">
                             <Col md={12} lg={12} sm={12}>
                                 <p>
-                                    <i className="fa-solid fa-phone"></i> <b>:       0300 1234567     </b>
+                                    <i className="fa-solid fa-phone"></i> <b>: 0300 1234567     </b>
                                 </p>
                             </Col>
                         </Row>
                         <Row className="lightFonts">
                             <Col md={12} lg={12} sm={12}>
                                 <p>
-                                    <i className="fa-solid fa-at"></i> <b>:   fitnetic@gmail.com   </b>
+                                    <i className="fa-solid fa-at"></i> <b>: oss @gmail.com   </b>
                                 </p>
                             </Col>
                         </Row>
@@ -65,8 +63,8 @@ const Footer = () => {
                         </Row>
                     </Col>
                 </Row>
-            </Container >
-        </div >
+            </Container>
+        </div>
     )
 }
 
