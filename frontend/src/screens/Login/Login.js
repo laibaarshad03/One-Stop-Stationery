@@ -31,7 +31,6 @@ const Login = () => {
               Submit
             </button>
           </div>
-         
         </div>
       </form>
     </div>
