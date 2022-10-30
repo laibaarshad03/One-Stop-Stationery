@@ -8,9 +8,9 @@ function Footer() {
             <Container>
                 <Row>
                     <Col style={{ marginTop: "20px" }} md={5} sm={12} lg={5}>
-                        <h4 className="boldFonts"><b>One Stop Stationary</b></h4>
+                        <h4 className="boldFonts"><b>One Stop Stationery</b></h4>
                         <p style={{ marginTop: "20px" }} className="lightFonts">
-                            One Stop Stationary provides you with a single stop to purchase any kind of stationary item. An online shopping cart at your service.
+                            One Stop Stationery provides you with a single stop to purchase any kind of stationary item. An online shopping cart at your service.
                         </p>
                     </Col>
                     <Col style={{ marginTop: "20px", textAlign: "left" }} md={3} sm={3} lg={3}>

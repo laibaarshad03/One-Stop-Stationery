@@ -8,7 +8,7 @@ function Header() {
     <>
       <Navbar style={{backgroundColor:"#e8a18e"}}>
         <Container>
-          <Navbar.Brand href="#home"><b>ONE STOP STATIONARY</b></Navbar.Brand>
+          <Navbar.Brand href="#home"><b>ONE STOP STATIONERY</b></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>

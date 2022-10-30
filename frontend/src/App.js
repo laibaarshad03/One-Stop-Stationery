@@ -6,11 +6,11 @@ import Signup from './screens/Signup/Signup';
 function App() {
   return (
     <div>
-      {/* <Login/> */}
-      <Signup/>
+      <Login/>
+      {/*<Signup/>*/}
       <Router>
           <Routes>
-            {/* <Route path="/api/login" element={<Login />} exact /> */}
+            <Route path="/api/login" element={<Login />} exact />
             <Route path="/api/signup" element={<Signup />} exact />
           </Routes>
         </Router>
