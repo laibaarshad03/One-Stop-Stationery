@@ -9,7 +9,7 @@ const Signup = () => {
       <div>
         <Header/>
       </div>
-      <div className="Auth-form-container">
+      <div className="Auth-form-container1" >
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign Up Form</h3>

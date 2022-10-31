@@ -14,12 +14,13 @@
     width:100%;
     margin-top: 8%;
   }
-  .Auth-form-container {
+  .Auth-form-container1 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    margin-left: 30%;
   }
   
   .Auth-form {

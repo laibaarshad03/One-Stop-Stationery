@@ -8,11 +8,8 @@ const Login = () => {
     <div>
     <div>
       <Header/>
-    </div>
-
-
-    <div style={{width:"100%", display:"flex"}}>
-    
+    </div>   
+    <div style={{width:"100%", height:"90vh", display:"flex"}}>
       <div style={{width:"60%"}}>
         <Carousel/>
       </div>
@@ -43,11 +40,11 @@ const Login = () => {
               </div>
               <div>
                 <button type="submit" className="button">
-                  Submit
+                  Sign In
                 </button>
               </div>
-              <div >
-                <a href="#" > Click here to signup</a>               
+              <div className="text-muted lightFonts">
+                 Don't have an account? Click <a href="/api/signup">here</a> to sign up.
               </div>
             </div>
           </form>

@@ -8,8 +8,7 @@ function CarouselFadeExample() {
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1554938521-9e0763797568?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHBhaW50cyUyMGJydXNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
           alt="First slide"
-          width="100%"
-          style={{ height: "550px", width: "100%" }}
+          style={{ height: "550px" }}
         />
         <Carousel.Caption>
           <h3>Find everything only at one stop!</h3>
@@ -22,6 +21,7 @@ function CarouselFadeExample() {
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1627873828998-50b7aeec7ffe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBlbmNpbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
           alt="Second slide"
+          style={{ height: "550px" }}
         />
 
         <Carousel.Caption>
