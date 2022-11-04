@@ -10,10 +10,7 @@ const Login = () => {
       <Header/>
     </div>   
     <div style={{width:"100%", height:"90vh", display:"flex"}}>
-      <div style={{width:"60%"}}>
-        <Carousel/>
-      </div>
-      <div style={{width:"40%"}}>
+      <div style={{width:"100%"}}>
         <div className="Auth-form-container">
           <form className="Auth-form">
             <div className="Auth-form-content">

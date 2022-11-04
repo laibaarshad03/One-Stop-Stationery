@@ -20,6 +20,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    margin-left:30%;
   }
   
   .Auth-form {

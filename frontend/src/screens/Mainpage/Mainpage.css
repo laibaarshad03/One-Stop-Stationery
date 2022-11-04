@@ -1,0 +1,25 @@
+.list-group{
+    flex-direction: row;
+    margin-top:2%;
+}
+.list-group-item{
+    width:25%;
+    text-align: center;
+}
+.list-group-item:hover{
+    background-color: #e8a18e;
+    color:white;
+}
+.item{
+    text-decoration: none;
+    color:black;
+}
+#button{
+    border-color: #e8a18e;
+    background-color:#e8a18e;
+    color:white;
+}
+.item:hover {
+    background-color: #e8a18e;
+    color:white;
+  }
