@@ -1,6 +1,7 @@
 .list-group{
     flex-direction: row;
     margin-top:2%;
+    border: 1px solid lightgrey;
 }
 .list-group-item{
     width:25%;
