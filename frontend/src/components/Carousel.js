@@ -25,7 +25,7 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-          <h3>You can never have to much of stationery!</h3>
+          <h3>You can never have too much of stationery!</h3>
           <p>Hey! You are at the right place.</p>
         </Carousel.Caption>
       </Carousel.Item>
