@@ -55,6 +55,7 @@ const Payment = () => {
                         className="form-control mt-1"
                         placeholder="Enter Year" 
                         />
+
                     </div>
                     </div>
                 </div>
@@ -76,6 +77,7 @@ const Payment = () => {
                     </button>
                 </div>
             </div>
+
         </form>
         </div>
         <div><Footer/></div>

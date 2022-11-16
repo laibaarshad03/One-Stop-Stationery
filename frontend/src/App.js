@@ -6,6 +6,7 @@ import Signup from './screens/Signup/Signup';
 import Payment from './screens/Payment/Payment';
 import Cart from './screens/Cart/Cart';
 import Checkout from './screens/Checkout/Checkout';
+import Admin from './screens/Admin/Admin';
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
             <Route path="/api/pay" element={<Payment />} exact />
             <Route path="/api/cart" element={<Cart />} exact />
             <Route path="/api/checkout" element={<Checkout />} exact />
+            <Route path="/api/admin" element={<Admin />} exact />
           </Routes>
         </Router>
     </div>

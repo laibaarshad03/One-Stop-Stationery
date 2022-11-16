@@ -42,15 +42,15 @@ const Mainpage = () => {
 
         <div>
         <ListGroup class="list-group">
-          <ListGroup.Item class="list-group-item" style={{width:"25%", textAlign:"center"}}> <a class="item" href="#">Drawing</a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Paper & Pad </a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Ink & Toner </a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Pencils & Erasers </a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Gifts Bags </a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item" > <a class="item" href="#">Basic Supplies</a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item"><a class="item" href="#">Journaling Essentials</a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item"><a class="item" href="#">Office/Desk Supplies</a></ListGroup.Item>
+          {/* <ListGroup.Item class="list-group-item"><a class="item" href="#">Pencils & Erasers </a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item"><a class="item" href="#">Gift Bags </a></ListGroup.Item> */}
         </ListGroup>
        
         </div>
-        <div style={{marginTop:"2%"}}>
+        <div style={{margin:"2%"}}>
         <Carousel/>
         </div>
         

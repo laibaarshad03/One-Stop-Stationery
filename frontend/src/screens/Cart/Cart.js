@@ -60,7 +60,7 @@ const Cart = () => {
             </Row>
             <hr/>
             <Row className="itemRow">
-                <Button className="float-end but" >
+                <Button className="float-end but">
                 Proceed to Checkout
                </Button>
             </Row>
