@@ -10,7 +10,7 @@ const Checkout = () => {
         <Form id="f1">
         <Form.Group className="mb-3" style={{marginTop:"5%"}}>
             <Form.Label>Contact information</Form.Label>
-            <Form.Label className="float-end"> <a href="#" style={{textDecoration:"none", color:"gray"}}> Already have an account? Log in</a></Form.Label>
+            <Form.Label className="float-end" style={{color:"gray"}}> Already have an account? <a href="#" style={{ color:"black"}}> Log in</a></Form.Label>
             <Form.Control type="email" placeholder="name@example.com" />
         </Form.Group>
         <Form.Group className="mb-3" >
@@ -45,7 +45,7 @@ const Checkout = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Row style={{marginBottom:"5%"}}>
+        <Row >
           <Col style={{marginTop:"3%"}}>
             <Form.Group className="mb-3" >
             <i class='fas fa-angle-double-left'></i>

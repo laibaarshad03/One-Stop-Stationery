@@ -59,10 +59,17 @@ const Cart = () => {
                 </Col> 
             </Row>
             <hr/>
-            <Row className="itemRow">
-                <Button className="float-end but">
-                Proceed to Checkout
-               </Button>
+            <Row style={{height: "50px"}}>
+                <Col style={{marginLeft:"43px"}}>
+                    <i class='fas fa-angle-double-left'></i>
+                    <a href="/" style={{color:"black"}}> Continue shopping </a>
+                </Col>
+                <Col  style={{marginRight:"43px"}}>
+                    <Button className="float-end but">
+                    Proceed to Checkout
+                    </Button>
+                </Col>
+                
             </Row>
         </Container>
      
