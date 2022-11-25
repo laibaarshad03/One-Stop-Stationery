@@ -7,6 +7,8 @@ import Payment from './screens/Payment/Payment';
 import Cart from './screens/Cart/Cart';
 import Checkout from './screens/Checkout/Checkout';
 import Admin from './screens/Admin/Admin';
+import ViewItems from './screens/ViewItems/ViewItems';
+
 function App() {
   return (
     <div>
@@ -19,6 +21,7 @@ function App() {
             <Route path="/api/cart" element={<Cart />} exact />
             <Route path="/api/checkout" element={<Checkout />} exact />
             <Route path="/api/admin" element={<Admin />} exact />
+            <Route path="/api/viewitems" element={<ViewItems />} exact />
           </Routes>
         </Router>
     </div>
