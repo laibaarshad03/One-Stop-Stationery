@@ -8,8 +8,20 @@ import Item from '../models/itemModel.js'
 // GET /api/viewitems
 router.get('/', asyncHandler(async (req, res) => {
     const items = await Item.find({})
-
     res.json(items)
+}))
+
+// fetches single items
+// GET /api/viewitems/:id
+router.get('/:id', asyncHandler(async (req, res) => {
+    // console.log(req.params.id)
+    const item = await Item.findById(req.params.id)
+    if (item){
+        res.json(item)
+
+    } else{
+        res.status(404).json({message: 'Product not found'})
+    }
 }))
 
 export default router

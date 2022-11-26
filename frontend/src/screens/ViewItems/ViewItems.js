@@ -1,9 +1,20 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Item from '../components/Item'
-import items from "../../../../backend/data/items";
+import Item from "../../components/Item";
 
 const ViewItems = () => {
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+        const fetchItems = async () => {
+            const { data } = await axios.get('/api/viewitems')
+
+            setItems(data)
+        }
+        fetchItems()
+    }, [])
+
     return (
         <>
         <h1>ITEMS</h1>

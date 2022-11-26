@@ -8,6 +8,7 @@ import Cart from './screens/Cart/Cart';
 import Checkout from './screens/Checkout/Checkout';
 import Admin from './screens/Admin/Admin';
 import ViewItems from './screens/ViewItems/ViewItems';
+import ItemDetails from './screens/ItemDetails/ItemDetails';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/api/checkout" element={<Checkout />} exact />
             <Route path="/api/admin" element={<Admin />} exact />
             <Route path="/api/viewitems" element={<ViewItems />} exact />
+            <Route path="/api/viewitems/:id" element={<ItemDetails />} />
           </Routes>
         </Router>
     </div>
