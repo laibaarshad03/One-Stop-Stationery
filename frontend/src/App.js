@@ -9,6 +9,7 @@ import Checkout from './screens/Checkout/Checkout';
 import Admin from './screens/Admin/Admin';
 import ViewItems from './screens/ViewItems/ViewItems';
 import ItemDetails from './screens/ItemDetails/ItemDetails';
+import CartScreen from './screens/CartScreen/CartScreen';
 
 function App() {
   return (
@@ -19,11 +20,12 @@ function App() {
             <Route path="/api/signup" element={<Signup />} exact />
             <Route path="/api/login" element={<Login />} exact />
             <Route path="/api/pay" element={<Payment />} exact />
-            <Route path="/api/cart/:id" element={<Cart />}  />
+            <Route path="/api/cart" element={<Cart />}  />
             <Route path="/api/checkout" element={<Checkout />} exact />
             <Route path="/api/admin" element={<Admin />} exact />
             <Route path="/api/viewitems" element={<ViewItems />} exact />
             <Route path="/api/viewitems/:id" element={<ItemDetails />} />
+            <Route path="/api/cart/:id" element={<CartScreen />}  />
           </Routes>
         </Router>
     </div>

@@ -11,7 +11,7 @@ function Header() {
           <Navbar.Brand href="#home"><b>ONE STOP STATIONERY</b></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#/cart">Cart</Nav.Link>
+            <Nav.Link href="/api/cart/0">Cart</Nav.Link>
           </Nav>
           <Nav className="justify-content-end">
              <Nav.Link href="/" >Log out</Nav.Link>

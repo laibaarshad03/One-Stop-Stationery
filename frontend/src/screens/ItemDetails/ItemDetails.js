@@ -14,7 +14,7 @@ const ItemDetails = ({ match }) => {
     const dispatch = useDispatch()
     const itemDetails = useSelector(state => state.itemDetails)
     const { loading, error, item} = itemDetails
-    const [qty, setQty] = useState(0)
+    const [qty, setQty] = useState(1)
     const { id } = useParams();
 
     const navigate = useNavigate();
