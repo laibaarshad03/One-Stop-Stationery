@@ -10,6 +10,7 @@ import Button from "react-bootstrap/Button";
 import { ListGroup } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom'
 const Mainpage = () => {
   return (
     <>
@@ -42,11 +43,16 @@ const Mainpage = () => {
 
         <div>
         <ListGroup class="list-group">
-          <ListGroup.Item class="list-group-item" > <a class="item" href="#">Basic Supplies</a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Journaling Essentials</a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item" >
+            <Link to={'/api/viewitems'} style={{ textDecoration: 'none' }}>
+            Basic Supplies    
+            </Link>
+            {/* <a class="item" href="#">Basic Supplies</a> */}
+          </ListGroup.Item>
+          <ListGroup.Item class="list-group-item"><a class="item" href="#">Paper Products</a></ListGroup.Item>
           <ListGroup.Item class="list-group-item"><a class="item" href="#">Office/Desk Supplies</a></ListGroup.Item>
-          {/* <ListGroup.Item class="list-group-item"><a class="item" href="#">Pencils & Erasers </a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item"><a class="item" href="#">Gift Bags </a></ListGroup.Item> */}
+          <ListGroup.Item class="list-group-item"><a class="item" href="#">Paiinting & Drawing </a></ListGroup.Item>
+          {/* <ListGroup.Item class="list-group-item"><a class="item" href="#">Gift Bags </a></ListGroup.Item> */}
         </ListGroup>
        
         </div>

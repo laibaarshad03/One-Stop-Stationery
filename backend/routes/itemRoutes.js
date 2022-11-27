@@ -8,6 +8,8 @@ import Item from '../models/itemModel.js'
 // GET /api/viewitems
 router.get('/', asyncHandler(async (req, res) => {
     const items = await Item.find({})
+    // res.status(401)
+    // throw new Error('Not Authorized')
     res.json(items)
 }))
 

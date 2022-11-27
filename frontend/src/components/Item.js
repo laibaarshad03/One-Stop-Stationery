@@ -7,6 +7,7 @@ const Item = ({item}) => {
         <Card className="my-3 p-3 rounded">
             <Link to={`/api/viewitems/${item._id}`}>
                 <Card.Img src={item.image} variant='top'/>
+                </Link>
                 <Card.Body>
                         <Card.Title as='div'>
                             <strong>{item.name}</strong>
@@ -15,7 +16,7 @@ const Item = ({item}) => {
                         ${item.price}
                     </Card.Text>
                 </Card.Body>
-            </Link>
+            
         </Card>
 
     )
