@@ -113,6 +113,7 @@ const ItemDetails = ({ match }) => {
             
           </Row>
         }
+        
         </Container>
         <div style={{marginTop:"60px"}}>
         <Footer/>
