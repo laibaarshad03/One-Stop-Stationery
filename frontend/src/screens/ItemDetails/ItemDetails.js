@@ -44,24 +44,20 @@ const ItemDetails = ({ match }) => {
         </Link>
         { loading ? <h2>loading...</h2> : error ? <h3>{error}</h3> :
         <Row>
-        <Col md={3}>
-            <Image src={item.image} alt={item.name} fluid/>
-        </Col>
-        <Col md={6}>
-            <ListGroup variant='flush'>
-                <ListGroup.Item>
-                    <h3>{item.name}</h3>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                    Description: {item.description}
-                </ListGroup.Item>
-                <ListGroup.Item>
-                    Price: ${item.price}
-                </ListGroup.Item>
-            </ListGroup>
-        </Col>
-        <Col md={3}>
-            <Card>
+            <Col md={4}>
+                <Image src={item.image} alt={item.name} fluid/>
+            </Col>
+            <Col md={8} >
+                <ListGroup variant="flush" style={{marginTop:"100px", marginLeft:"100px"}}>
+                    <ListGroup.Item>
+                        <h4>{item.name}</h4>
+                    </ListGroup.Item>
+                    <ListGroup.Item style={{ width:"80%",marginTop:"5px"}}>
+                        <b>Description: </b> {item.description}
+                    </ListGroup.Item>
+                    
+                </ListGroup>
+                <Card  style={{marginLeft:"100px"}}>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
                     <Row>
@@ -103,7 +99,7 @@ const ItemDetails = ({ match }) => {
                         </ListGroup.Item>
                     )}
                     <ListGroup.Item>
-                        <Button 
+                        <Button style={{backgroundColor:"black"}}
                         onClick={addToCartHandler}
                         className='btn-block' 
                         type='button' 
@@ -113,11 +109,15 @@ const ItemDetails = ({ match }) => {
                     </ListGroup.Item>
                 </ListGroup>
             </Card>
-        </Col>
-    </Row>
+            </Col>
+            
+          </Row>
         }
         </Container>
-        <div><Footer/></div>
+        <div style={{marginTop:"60px"}}>
+        <Footer/>
+        </div>
+        
         </>
     )
 }
