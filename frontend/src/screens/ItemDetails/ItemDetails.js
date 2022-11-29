@@ -50,10 +50,10 @@ const ItemDetails = ({ match }) => {
             <Col md={8} >
                 <ListGroup variant="flush" style={{marginTop:"100px", marginLeft:"100px"}}>
                     <ListGroup.Item>
-                        <h4>{item.name}</h4>
+                        <h4 style={{marginTop:"8px"}}>{item.name}</h4>
                     </ListGroup.Item>
                     <ListGroup.Item style={{ width:"80%",marginTop:"5px"}}>
-                        <b>Description: </b> {item.description}
+                        <b >Description: </b> {item.description}
                     </ListGroup.Item>
                     
                 </ListGroup>
