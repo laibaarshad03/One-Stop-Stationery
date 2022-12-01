@@ -4,8 +4,6 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import  {useState, useEffect} from 'react'
 import { login } from '../../actions/userActions'
-import { Link } from 'react-router-dom'
-import { Row } from 'react-bootstrap'
 import { useDispatch,  useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
