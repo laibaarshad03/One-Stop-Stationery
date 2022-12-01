@@ -2,8 +2,34 @@ import React from 'react'
 import './Login.css'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Carousel from '../../components/Carousel'
+import  {useState, useEffect, useSelector} from 'react'
+import { login } from '../../actions/userActions'
+import { Link } from 'react-router-dom'
+import { Row } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
 const Login = () => {
+  let history = useNavigate()
+  const dispatch = useDispatch()
+  // const userLogin = useSelector((state)=>state.userLogin)
+  //const { loading, error, userInfo }=userLogin
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  //const redirect = location.search ?location.search.split('=')[1] : '/'
+  
+  // useEffect(()=>{
+  //   if (userInfo){
+  //     history("/api/viewItems")
+  //   }
+  // }, [dispatch, history, userInfo])
+
+  const submitHandler=(e)=>{
+    console.log(email,password)
+    dispatch(login(email, password))
+    // history("/api/viewItems")
+  }
+
   return (
     <div>
     <div>
@@ -20,6 +46,9 @@ const Login = () => {
                 <div> 
                     <input style={{ width:"100%", height:"5vh"}}
                     type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
                     className="form-control mt-1"
                     placeholder="Enter email"
                     />
@@ -30,20 +59,21 @@ const Login = () => {
                 <div>
                     <input style={{ width:"100%", height:"5vh"}}
                     type="password"
+                    id="password"
                     className="form-control mt-1"
+                    value={password}
+                    onChange={(e)=>setPassword(e.target.value)}
                     placeholder="Enter password"
                     />
                 </div>
               </div>
               <div>
-                <button type="submit" className="button">
+                <button onClick={submitHandler} type="button" className="button">
                   Sign In
                 </button>
               </div>
-              <div className="text-muted lightFonts">
-                 Don't have an account? Click <a href="/api/signup">here</a> to sign up.
-              </div>
             </div>
+         
           </form>
         </div>
       </div>

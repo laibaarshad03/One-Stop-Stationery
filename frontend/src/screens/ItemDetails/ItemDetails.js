@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from 'react-router-dom';
 import { Row, Col,Form, Image, ListGroup, Card, Button, Container } from 'react-bootstrap'
 // import axios from "axios";
-import { withRouter } from 'react-router-dom'
 import { listItemDetails } from "../../actions/itemActions";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
