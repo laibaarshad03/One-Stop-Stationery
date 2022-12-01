@@ -2,32 +2,31 @@ import React from 'react'
 import './Login.css'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import  {useState, useEffect, useSelector} from 'react'
+import  {useState, useEffect} from 'react'
 import { login } from '../../actions/userActions'
 import { Link } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
+import { useDispatch,  useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   let history = useNavigate()
   const dispatch = useDispatch()
-  // const userLogin = useSelector((state)=>state.userLogin)
-  //const { loading, error, userInfo }=userLogin
+  const { loading, error, userInfo } = useSelector((state) => state.userLogin)
+  
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  //const redirect = location.search ?location.search.split('=')[1] : '/'
-  
-  // useEffect(()=>{
-  //   if (userInfo){
-  //     history("/api/viewItems")
-  //   }
-  // }, [dispatch, history, userInfo])
+
+  useEffect(() => {
+    if (userInfo) {
+      history("/api/viewItems")
+    }
+  }, [dispatch, userInfo, history])
 
   const submitHandler=(e)=>{
-    console.log(email,password)
+    //console.log(email,password)
     dispatch(login(email, password))
-    // history("/api/viewItems")
+
   }
 
   return (
@@ -72,8 +71,15 @@ const Login = () => {
                   Sign In
                 </button>
               </div>
+              <div>
+                Don't have an account? Click <a href="/api/signup">here</a> to sign up.
+              </div>
             </div>
-         
+            {error ?
+              <div class="text-danger" style={{marginLeft:"12%"}}>
+                    * Invalid Email or Password
+              </div>
+              : ''}
           </form>
         </div>
       </div>
