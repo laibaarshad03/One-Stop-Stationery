@@ -43,7 +43,7 @@ const Mainpage = () => {
           <a href="/api/login" style={{color:"black"}}>
             <i class="fa fa-user" style={{fontSize:"25px", marginLeft:"50%"}}></i>
           </a>
-          <a href="/api/cart" style={{color:"black"}}>
+          <a href="/api/cart/:id" style={{color:"black"}}>
             <i class="fa fa-shopping-cart" style={{fontSize:"25px", marginLeft:"10%"}}></i>
           </a>
           </div>

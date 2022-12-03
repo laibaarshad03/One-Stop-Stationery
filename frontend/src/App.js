@@ -20,7 +20,7 @@ function App() {
             <Route path="/api/signup" element={<Signup />} exact />
             <Route path="/api/login" element={<Login />} exact />
             <Route path="/api/pay" element={<Payment />} exact />
-            <Route path="/api/cart" element={<Cart />}  />
+            <Route path="/api/cart/:id" element={<CartScreen />}  />
             <Route path="/api/checkout" element={<Checkout />} exact />
             <Route path="/api/admin" element={<Admin />} exact />
             <Route path="/api/viewitems" element={<ViewItems />} exact />

@@ -8,15 +8,9 @@ import { useNavigate } from 'react-router-dom'
 import  {useState, useEffect} from 'react'
 
 const Header = ()=> {
-  //let history = useNavigate()
+
   const dispatch=useDispatch()
- // const { userInfo }= useSelector((state) => state.userLogin)
-  
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     history("/api/viewItems")
-  //   }
-  // }, [dispatch, userInfo, history])
+  const { loading, error, userInfo } = useSelector((state) => state.userLogin)
 
   const logoutHandler = () => {
     dispatch(logout())
@@ -32,7 +26,8 @@ const Header = ()=> {
             <Nav.Link href="/api/cart/0">Cart</Nav.Link>
           </Nav>
           <Nav className="justify-content-end">
-             <Nav.Link href="/"  onClick ={logoutHandler}>Log out</Nav.Link>
+          
+             <Nav.Link href="/" onClick ={logoutHandler}>Log out</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
