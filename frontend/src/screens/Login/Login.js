@@ -17,7 +17,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userInfo) {
-      history("/api/viewItems")
+      history("/")
     }
   }, [dispatch, userInfo, history])
 
