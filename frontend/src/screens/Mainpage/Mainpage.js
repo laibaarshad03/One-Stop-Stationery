@@ -12,6 +12,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom'
 const Mainpage = () => {
+  const basicSupplies='BasicSupplies';
+  const paperProducts='Paper Products';
+  const officeSupplies='Office Supplies';
+  const painting='Painting & Drawing';
+
+  function handleSubmit(category) {
+    localStorage.setItem('category', category)
+  }
   return (
     <>
         <div>
@@ -42,19 +50,22 @@ const Mainpage = () => {
         </div>
 
         <div>
-        <ListGroup class="list-group">
-          <ListGroup.Item class="list-group-item1" >
-            <Link to={'/api/viewitems'} style={{ textDecoration: 'none' }}>
-            Basic Supplies    
-            </Link>
-            {/* <a class="item" href="#">Basic Supplies</a> */}
-          </ListGroup.Item>
-          <ListGroup.Item class="list-group-item1"><a class="item" href="#">Paper Products</a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item1"><a class="item" href="#">Office/Desk Supplies</a></ListGroup.Item>
-          <ListGroup.Item class="list-group-item1"><a class="item" href="#">Paiinting & Drawing </a></ListGroup.Item>
-          {/* <ListGroup.Item class="list-group-item"><a class="item" href="#">Gift Bags </a></ListGroup.Item> */}
+        <ListGroup class="list-group" >
+          <ListGroup.Item class="list-group-item1" style={{width:"25%"}}>
+          <a class="item" href="/api/viewItems" onClick={() => handleSubmit('Basic Supplies')}>
+          <div class="list-group-item1" style={{textAlign: "center"}}>
+            Basic Supplies
+          </div>
+          </a>
+         </ListGroup.Item>
+          <ListGroup.Item class="list-group-item1" style={{width:"25%"}}>
+          <a  class="item" href="/api/viewItems"onClick={() => handleSubmit('Paper Products')}>
+           <div class="list-group-item1" style={{textAlign: "center"}}> Paper Products  </div>  </a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item1" style={{width:"25%"}}><a class="item" href="/api/viewItems"onClick={() => handleSubmit('Office Supplies')}
+          > <div class="list-group-item1" style={{textAlign: "center"}}> Office/Desk Supplies</div></a></ListGroup.Item>
+          <ListGroup.Item class="list-group-item1" style={{width:"25%"}}><a class="item" href="/api/viewItems" onClick={() => handleSubmit('Painting & Drawing')}>
+          <div class="list-group-item1" style={{textAlign: "center"}}> Painting & Drawing </div> </a></ListGroup.Item>
         </ListGroup>
-       
         </div>
         <div style={{margin:"2%"}}>
         <Carousel/>

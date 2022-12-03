@@ -9,10 +9,12 @@ import {
 } from "../constants/itemConstants" 
 
 export const listItems = () => async (dispatch) => {
+
     try{
+        //console.log('in the actions', category)
         dispatch({ type: ITEM_LIST_REQUEST })
 
-        const { data } = await axios.get('/api/viewitems')
+        const { data } = await axios.get('/api/viewitems' )
 
         dispatch({
             type: ITEM_LIST_SUCCESS,
