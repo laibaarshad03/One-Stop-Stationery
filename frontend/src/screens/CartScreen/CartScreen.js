@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { Row, Col,Form, Image, ListGroup, Card, Button, Container } from 'react-bootstrap'
 import { addToCart, removeFromCart } from "../../actions/cartActions";
 import { useNavigate,useLocation } from "react-router-dom";
@@ -8,18 +8,18 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const CartScreen = ({ }) => {
+    const navigate = useNavigate()
     const { id } = useParams();
-
     const location = useLocation();
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
     // console.log(qty)
-
     const dispatch = useDispatch()
-
     const cart = useSelector(state => state.cart)
+    const user = useSelector(state => state.userLogin)
 
     const {cartItems} = cart
     // console.log(cartItems)
+    const {userInfo} = user
 
     useEffect(() => {
         if(id) {
@@ -33,7 +33,12 @@ const CartScreen = ({ }) => {
     }
 
     const checkoutHandler=()=>{
-        console.log('checkout')
+        // console.log('checkout')
+        if (userInfo === null) {
+            navigate('/api/login')
+        }else{
+            navigate('/api/checkout')
+        }
     }
 
 
