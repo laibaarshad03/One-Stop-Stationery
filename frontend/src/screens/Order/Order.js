@@ -8,6 +8,7 @@ import CheckoutSteps from "../../components/CheckoutSteps";
 import { useSelector } from "react-redux";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+// import './PopUp.css'
 
 const Order = () => {
     const navigate = useNavigate()
@@ -136,7 +137,13 @@ const Order = () => {
                             </Row>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                        <Popup trigger={
+                        <Popup 
+                        contentStyle={{
+                        width: "120px", 
+                        background: '#e8a18e',
+                        padding: '5px'
+                        }}
+                        trigger={
                             <Button type='button'
                                 className='btn-block'
                                 disbaled={toString(cart.cartItems === 0)}
@@ -144,17 +151,9 @@ const Order = () => {
                                 style={{background:'black'}}>
                                     Place Order
                                 </Button>
-                            } 
-                            position="right center">
-                                <div>Order has been placed !!</div>
+                            }>
+                            <div>Your order has been placed !!</div>
                         </Popup>
-                            {/* <Button type='button'
-                            className='btn-block'
-                            disbaled={toString(cart.cartItems === 0)}
-                            onClick={placeOrderHandler}
-                            style={{background:'black'}}>
-                                Place Order
-                            </Button> */}
                         </ListGroup.Item>
                     </ListGroup>
                 </Card>

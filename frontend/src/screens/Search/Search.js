@@ -6,6 +6,7 @@ import Item from "../../components/Item";
 import { listItems } from "../../actions/itemActions";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 
 const Search = ( ) => {
@@ -25,9 +26,12 @@ const Search = ( ) => {
         <>
         <Header/>
         <Container>
+        <Link className = 'btn btn-light my-3' to='/'>
+            Back to Home Screen
+        </Link>
         { loading ? <h2>loading...</h2> : error ? <h3>{error}</h3> :
         <Row>
-        
+        <h4>Search Results for {keyword} </h4>
         {items.filter(item => {
             const name= item.name;
             const des=item.description;

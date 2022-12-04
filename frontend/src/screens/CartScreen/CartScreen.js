@@ -46,9 +46,11 @@ const CartScreen = ({ }) => {
         <>
         <Header/>
         <Container>
+        <Link className = 'btn btn-light my-3' to='/api/viewitems'>
+            Continue Shopping
+        </Link>
             <Row style={{marginTop:"5%"}}>
                 <Col md={12}>
-                    
                     {cartItems.length === 0 ? 
                     <h5 style={{color:"darkgray"}}>
                         Your cart is empty!
@@ -84,7 +86,7 @@ const CartScreen = ({ }) => {
                                         <Col md={2}>
                                             <Button type='button' variant='light' style={{marginTop:"55%"}}
                                             onClick={() => removeFromCartHandler(item.itemId)}>
-                                                <i className='fas fa-trash'></i>
+                                                <i className='fa fas fa-trash'></i>
                                             </Button>
                                         </Col>
                                     </Row>
@@ -100,8 +102,8 @@ const CartScreen = ({ }) => {
             <Card style={{marginTop:"10%"}}>
                 <ListGroup variant='flush'>
                     <ListGroup.Item style={{width:"50%"}}>
-                        <h5>SubTotal ({cartItems.reduce((acc,item) =>
-                        acc + item.qty , 0)}) items</h5>
+                        <h6>SubTotal ({cartItems.reduce((acc,item) =>
+                        acc + item.qty , 0)}) items</h6>
                         ${cartItems.reduce((acc,item) => acc+item.qty * item.price , 0).
                         toFixed(2)}
                     </ListGroup.Item>

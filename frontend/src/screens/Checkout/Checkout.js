@@ -31,7 +31,7 @@ const { checkoutAddress } = cart
   return (
     <div >
       <Header/>
-      <Container className="square border border-1 con shadow p-3 mb-5 bg-white rounded" style={{width:"45%"}}>
+      <Container className="square border border-1 con shadow p-3 mb-5 bg-white rounded" style={{width:"45%", marginTop:'50px'}}>
         <CheckoutSteps s1 s2/>
         <hr></hr>
         {/* <div style={{textAlign:'center'}}><h1>Checkout</h1></div> */}
@@ -86,7 +86,7 @@ const { checkoutAddress } = cart
         <Row >
           <Col style={{marginTop:"3%"}}>
             <Form.Group className="mb-3" >
-            <i className='fas fa-angle-double-left'></i>
+            <i className='fa fas fa-angle-double-left'></i>
               <a href="/api/cart/0" style={{color:"black", marginLeft:"2%"}}> 
               Return to cart </a>
             </Form.Group>
