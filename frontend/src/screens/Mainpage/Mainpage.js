@@ -7,7 +7,7 @@ import './Mainpage.css';
 import {Button,FormControl, ListGroup}  from "react-bootstrap";
 import { Link } from 'react-router-dom'
 import  {useState} from 'react'
-
+//import {FaUser} from 'react-bootstrap-icons'
 const Mainpage = () => {
   const [keyword, setKeyword] = useState('')
   function handleSubmit(category) {
@@ -45,7 +45,7 @@ const Mainpage = () => {
             <i class="fa fa-user" style={{fontSize:"25px", marginLeft:"50%"}}></i>
           </a>
           <a href="/api/cart/:id" style={{color:"black"}}>
-            <i class="fa fa-shopping-cart" style={{fontSize:"25px", marginLeft:"10%"}}></i>
+            <i class="fa fa-cart" style={{fontSize:"25px", marginLeft:"10%"}}></i>
           </a>
           </div>
         </div>

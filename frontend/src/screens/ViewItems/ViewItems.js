@@ -6,7 +6,7 @@ import Item from "../../components/Item";
 import { listItems } from "../../actions/itemActions";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { Link, useParams } from 'react-router-dom';
+
 
 const ViewItems = ( ) => {
     // const [items, setItems] = useState([])
