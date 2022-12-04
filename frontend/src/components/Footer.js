@@ -18,21 +18,21 @@ function Footer() {
                         <Row style={{ marginTop: "20px" }} className="lightFonts">
                             <Col md={12} lg={12} sm={12}>
                                 <p>
-                                    <i className="fa-solid fa-phone"></i> <b>: 0300 1234567     </b>
+                                    <i className="fa fa-solid fa-phone"></i> <b>: 0300 1234567     </b>
                                 </p>
                             </Col>
                         </Row>
                         <Row className="lightFonts">
                             <Col md={12} lg={12} sm={12}>
                                 <p>
-                                    <i className="fa-solid fa-at"></i> <b>: oss @gmail.com   </b>
+                                    <i className="fa fa-solid fa-at"></i> <b>: oss @gmail.com   </b>
                                 </p>
                             </Col>
                         </Row>
                         <Row className="lightFonts">
                             <Col md={12} lg={12} sm={12}>
                                 <p>
-                                    <i className="fa-solid fa-envelope"></i> <b>:       PO-BOX 123 Lahore</b>
+                                    <i className="fa fa-solid fa-envelope"></i> <b>:       PO-BOX 123 Lahore</b>
                                 </p>
                             </Col>
                         </Row>
@@ -41,24 +41,24 @@ function Footer() {
                         <h4 className="boldFonts"><b>Connect With Us</b></h4>
                         <Row className="lightFonts" style={{ textAlign: "center", marginTop: "20px" }}>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-facebook fa-2x"></i>
+                                <i className="fa fa-brands fa-facebook fa-2x"></i>
                             </Col>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-twitter fa-2x"></i>
+                                <i className="fa fa-brands fa-twitter fa-2x"></i>
                             </Col>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-instagram fa-2x"></i>
+                                <i className="fa fa-brands fa-instagram fa-2x"></i>
                             </Col>
                         </Row>
                         <Row className="lightFonts" style={{ textAlign: "center", marginTop: "20px" }}>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-snapchat fa-2x"></i>
+                                <i className="fa fa-brands fa-snapchat fa-2x"></i>
                             </Col>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-linkedin fa-2x"></i>
+                                <i className="fa fa-brands fa-linkedin fa-2x"></i>
                             </Col>
                             <Col md={4} lg={4} sm={4}>
-                                <i className="fa-brands fa-github fa-2x"></i>
+                                <i className="fa fa-brands fa-github fa-2x"></i>
                             </Col>
                         </Row>
                     </Col>

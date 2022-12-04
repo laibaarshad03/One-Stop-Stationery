@@ -39,9 +39,12 @@ const ViewItems = ( ) => {
         <>
         <div><Header/></div>
         <Container>
+        <Link className = 'btn btn-light my-3' to='/'>
+            Back to Home Screen
+        </Link>
         { loading ? <h2>loading...</h2> : error ? <h3>{error}</h3> :
         <Row>
-       
+       <h3>{category}</h3>
         {items.filter (item=>item.category===category).map((filtereditem) => (
             <Col sm={12} md={6} lg={4} xl={3}>
                 <Item item={filtereditem} />

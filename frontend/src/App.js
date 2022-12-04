@@ -10,6 +10,8 @@ import ViewItems from './screens/ViewItems/ViewItems';
 import ItemDetails from './screens/ItemDetails/ItemDetails';
 import CartScreen from './screens/CartScreen/CartScreen';
 import Search from './screens/Search/Search';
+import Order from './screens/Order/Order';
+
 function App() {
   return (
     <div>
@@ -19,6 +21,7 @@ function App() {
             <Route path="/api/signup" element={<Signup />} exact />
             <Route path="/api/login" element={<Login />} exact />
             <Route path="/api/pay" element={<Payment />} exact />
+            <Route path="/api/order" element={<Order />} exact />
             <Route path="/api/search" element={<Search />} exact />
             <Route path="/api/checkout" element={<Checkout />} exact />
             <Route path="/api/admin" element={<Admin />} exact />

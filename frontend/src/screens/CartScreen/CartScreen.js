@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { Row, Col,Form, Image, ListGroup, Card, Button, Container } from 'react-bootstrap'
 import { addToCart, removeFromCart } from "../../actions/cartActions";
 import { useNavigate,useLocation } from "react-router-dom";
@@ -8,18 +8,18 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const CartScreen = ({ }) => {
+    const navigate = useNavigate()
     const { id } = useParams();
-
     const location = useLocation();
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
     // console.log(qty)
-
     const dispatch = useDispatch()
-
     const cart = useSelector(state => state.cart)
+    const user = useSelector(state => state.userLogin)
 
     const {cartItems} = cart
     // console.log(cartItems)
+    const {userInfo} = user
 
     useEffect(() => {
         if(id) {
@@ -33,7 +33,12 @@ const CartScreen = ({ }) => {
     }
 
     const checkoutHandler=()=>{
-        console.log('checkout')
+        // console.log('checkout')
+        if (userInfo === null) {
+            navigate('/api/login')
+        }else{
+            navigate('/api/checkout')
+        }
     }
 
 
@@ -41,9 +46,11 @@ const CartScreen = ({ }) => {
         <>
         <Header/>
         <Container>
+        <Link className = 'btn btn-light my-3' to='/api/viewitems'>
+            Continue Shopping
+        </Link>
             <Row style={{marginTop:"5%"}}>
                 <Col md={12}>
-                    
                     {cartItems.length === 0 ? 
                     <h5 style={{color:"darkgray"}}>
                         Your cart is empty!
@@ -79,7 +86,7 @@ const CartScreen = ({ }) => {
                                         <Col md={2}>
                                             <Button type='button' variant='light' style={{marginTop:"55%"}}
                                             onClick={() => removeFromCartHandler(item.itemId)}>
-                                                <i className='fas fa-trash'></i>
+                                                <i className='fa fas fa-trash'></i>
                                             </Button>
                                         </Col>
                                     </Row>
@@ -95,8 +102,8 @@ const CartScreen = ({ }) => {
             <Card style={{marginTop:"10%"}}>
                 <ListGroup variant='flush'>
                     <ListGroup.Item style={{width:"50%"}}>
-                        <h5>SubTotal ({cartItems.reduce((acc,item) =>
-                        acc + item.qty , 0)}) items</h5>
+                        <h6>SubTotal ({cartItems.reduce((acc,item) =>
+                        acc + item.qty , 0)}) items</h6>
                         ${cartItems.reduce((acc,item) => acc+item.qty * item.price , 0).
                         toFixed(2)}
                     </ListGroup.Item>

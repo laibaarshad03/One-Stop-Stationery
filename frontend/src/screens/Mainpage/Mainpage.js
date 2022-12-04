@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Carousel from '../../components/Carousel'
 import InputGroup from "react-bootstrap/InputGroup";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import './Mainpage.css';
 import {Button,FormControl, ListGroup}  from "react-bootstrap";
 import { Link } from 'react-router-dom'
@@ -36,10 +37,8 @@ const Mainpage = () => {
                     Search
                   </Button>
               </Link>
-           
             </InputGroup>
           </div>
-          
           <div style={{width:"20%", marginTop:"5%"}}>
           <a href="/api/login" style={{color:"black"}}>
             <i class="fa fa-user" style={{fontSize:"25px", marginLeft:"50%"}}></i>
@@ -49,7 +48,6 @@ const Mainpage = () => {
           </a>
           </div>
         </div>
-
         <div>
         <ListGroup class="list-group"  style={{flexDirection: "row"}}>
           <ListGroup.Item class="list-group-item1" style={{width:"25%"}}>

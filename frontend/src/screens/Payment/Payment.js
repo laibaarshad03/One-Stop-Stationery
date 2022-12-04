@@ -1,9 +1,11 @@
 import React from 'react'
 import './Payment.css'
+import { useNavigate } from "react-router-dom";
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { Form } from 'react-bootstrap'
+import { Container, Form } from 'react-bootstrap'
 import { useEffect, useState } from "react";
+import CheckoutSteps from '../../components/CheckoutSteps';
 
 const Payment = () => {
 
@@ -11,19 +13,32 @@ const Payment = () => {
     // const checkLength = event => {
     //     if ()
     // }
+    const navigate = useNavigate()
+
+    const submitHandler=(e)=>{
+        // e.preventDefault()
+        navigate('/api/order')
+    }
 
     return(
         <div>
         <div><Header/></div>
-        <div className="Auth-form-container1" >
-        <form className="Auth-form">
+        <div className="Container" >
+        <Container className="square border border-1 con shadow p-3 mb-5 bg-white rounded" style={{width:"45%"}}>
+            <CheckoutSteps s1 s2 s3/>
+        <hr></hr>
+        <Form onSubmit={submitHandler}>
+        {/* <form className="Auth-form" onSubmit={submitHandler}> */}
             <div className="Auth-form-content">
                 <h3 className="Auth-form-title">Credit Card Payment</h3>
+                <hr></hr>
                 <div className="form-group mt-3">
                     <label>Card Owner Name</label>
                     <div> 
-                        <input style={{ width:"100%", height:"5vh"}}
+                        <input 
+                        style={{ width:"100%", height:"5vh"}}
                         type="text"
+                        required
                         className="form-control mt-1"
                         placeholder="Enter Valid Owner Name"
                         />
@@ -34,6 +49,7 @@ const Payment = () => {
                     <div> 
                         <input style={{ width:"100%", height:"5vh"}}
                         type="text"
+                        required
                         className="form-control mt-1"
                         placeholder="Enter Valid Card Number"
                         />
@@ -45,6 +61,7 @@ const Payment = () => {
                     <div> 
                         <input style={{ width:"100%", height:"5vh"}}
                         type="number"
+                        required
                         className="form-control mt-1"
                         placeholder="Enter Month"
                         />
@@ -52,6 +69,7 @@ const Payment = () => {
                     <div> 
                         <input style={{ width:"100%", height:"5vh"}}
                         type="number"
+                        required
                         className="form-control mt-1"
                         placeholder="Enter Year" 
                         />
@@ -64,6 +82,7 @@ const Payment = () => {
                     <div> 
                         <input style={{ width:"100%", height:"5vh"}}
                         type="number"
+                        required
                         className="form-control mt-1"
                         placeholder="Enter 3-digit code"
                         // value={code}
@@ -72,15 +91,18 @@ const Payment = () => {
                     </div>
                 </div>
                 <div className="d-grid gap-2 mt-3">
-                    <button type="submit" className="button">
+                    <button type="submit"
+                    // onClick={submitHandler} 
+                    className="button">
                         Confirm Payment
                     </button>
                 </div>
             </div>
-
-        </form>
+        </Form>
+        {/* </form> */}
+        </Container>
         </div>
-        <div><Footer/></div>
+        <div style={{marginTop:'40px'}}><Footer/></div>
         </div>
     )
 }
