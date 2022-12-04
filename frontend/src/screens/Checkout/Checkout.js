@@ -93,10 +93,10 @@ const { checkoutAddress } = cart
           </Col>
           <Col>
             <Button id="b1" 
-            // className="float-end" 
+            className="float-end" 
             type='submit'
             // onClick={{submitHandler}}
-            style={{backgroundColor:"black"}}>
+            style={{backgroundColor:"black", marginTop:"3%"}}>
                 Continue to Payment
                </Button>
           </Col>

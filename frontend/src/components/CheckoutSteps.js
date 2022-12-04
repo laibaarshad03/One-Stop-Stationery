@@ -7,11 +7,11 @@ const CheckoutSteps = ({s1, s2, s3, s4}) => {
 
     return(
         <Nav className="justify-content-center mb-4" >
-            <Nav.Item >
+            <Nav.Item  >
                 {s1 ? (
                     <LinkContainer to= '/api/login'>
                         <Nav.Link>
-                            Log In
+                            <div style={{color:"green"}}> Log In </div>
                         </Nav.Link>
                     </LinkContainer>
                      ): (<Nav.Link disabled>
@@ -23,7 +23,7 @@ const CheckoutSteps = ({s1, s2, s3, s4}) => {
                 {s2 ? (
                     <LinkContainer to= '/api/checkout'>
                         <Nav.Link>
-                            Checkout
+                            <div style={{color:"green"}}> Checkout </div>
                         </Nav.Link>
                     </LinkContainer>
                      ): (<Nav.Link disabled>
@@ -35,7 +35,7 @@ const CheckoutSteps = ({s1, s2, s3, s4}) => {
                 {s3 ? (
                     <LinkContainer to= '/api/pay'>
                         <Nav.Link>
-                            Payment
+                        <div style={{color:"green"}}> Payment </div>
                         </Nav.Link>
                     </LinkContainer>
                      ): (<Nav.Link disabled>
@@ -47,7 +47,7 @@ const CheckoutSteps = ({s1, s2, s3, s4}) => {
                 {s4 ? (
                     <LinkContainer to= '/api/order'>
                         <Nav.Link>
-                            Order Placed
+                        <div style={{color:"green"}}> Order Placed </div>
                         </Nav.Link>
                     </LinkContainer>
                      ): (<Nav.Link disabled>

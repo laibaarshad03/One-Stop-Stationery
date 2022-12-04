@@ -34,8 +34,8 @@ const Order = () => {
         <hr></hr>
             <CheckoutSteps s1 s2 s3 s4/>
         <hr></hr>
-        <Row>
-            <Col md={8} style={{paddingLeft:'5px'}}>
+        <Row style={{marginRight: "1%", marginLeft:"1%"}}>
+            <Col md={8}>
                 <ListGroup 
                 className='shadow p-3 mb-5 bg-white rounded'
                 variant='flush' 
@@ -96,7 +96,7 @@ const Order = () => {
                 </ListGroup>
             </Col>
             <Col md={4}>
-                <Card className='shadow p-3 mb-5 bg-white rounded'>
+                <Card className='shadow p-3 mb-5 bg-white rounded' style={{marginTop:"4%"}}>
                     <ListGroup 
                     // className='shadow p-3 mb-5 bg-white rounded'
                     variant='flush' 
@@ -139,8 +139,8 @@ const Order = () => {
                         <ListGroup.Item>
                         <Popup 
                         contentStyle={{
-                        width: "120px", 
-                        background: '#e8a18e',
+                        width: "30%", 
+                        height: "100px",
                         padding: '5px'
                         }}
                         trigger={
@@ -152,7 +152,7 @@ const Order = () => {
                                     Place Order
                                 </Button>
                             }>
-                            <div>Your order has been placed !!</div>
+                            <div class="d-flex justify-content-center" style={{marginTop:"8%"}}>Your order has been placed.</div>
                         </Popup>
                         </ListGroup.Item>
                     </ListGroup>

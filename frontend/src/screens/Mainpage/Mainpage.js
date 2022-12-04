@@ -5,7 +5,9 @@ import Carousel from '../../components/Carousel'
 import InputGroup from "react-bootstrap/InputGroup";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './Mainpage.css';
+import { BsFillCartFill } from "react-icons/bs";
 import {Button,FormControl, ListGroup}  from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom'
 import  {useState} from 'react'
 //import {FaUser} from 'react-bootstrap-icons'
@@ -41,10 +43,12 @@ const Mainpage = () => {
           </div>
           <div style={{width:"20%", marginTop:"5%"}}>
           <a href="/api/login" style={{color:"black"}}>
-            <i class="fa fa-user" style={{fontSize:"25px", marginLeft:"50%"}}></i>
+            <i class="fa fa-user" style={{fontSize:"30px", marginLeft:"48%"}}></i>
           </a>
+          
           <a href="/api/cart/:id" style={{color:"black"}}>
-            <i class="fa fa-cart" style={{fontSize:"25px", marginLeft:"10%"}}></i>
+          <BsFillCartFill style={{marginLeft: "7%", fontSize:"28px", marginBottom:"5%"}}></BsFillCartFill>
+            
           </a>
           </div>
         </div>

@@ -23,11 +23,11 @@ const Payment = () => {
     return(
         <div>
         <div><Header/></div>
-        <div className="Container" >
+        <div className="Container" style={{marginTop:"2%"}} >
         <Container className="square border border-1 con shadow p-3 mb-5 bg-white rounded" style={{width:"45%"}}>
             <CheckoutSteps s1 s2 s3/>
         <hr></hr>
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler} >
         {/* <form className="Auth-form" onSubmit={submitHandler}> */}
             <div className="Auth-form-content">
                 <h3 className="Auth-form-title">Credit Card Payment</h3>
@@ -90,7 +90,7 @@ const Payment = () => {
                         />
                     </div>
                 </div>
-                <div className="d-grid gap-2 mt-3">
+                <div className="d-grid gap-2 ">
                     <button type="submit"
                     // onClick={submitHandler} 
                     className="button">

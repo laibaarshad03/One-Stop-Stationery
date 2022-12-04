@@ -49,7 +49,7 @@ const CartScreen = ({ }) => {
         <Link className = 'btn btn-light my-3' to='/api/viewitems'>
             Continue Shopping
         </Link>
-            <Row style={{marginTop:"5%"}}>
+            <Row style={{marginTop:"3%"}}>
                 <Col md={12}>
                     {cartItems.length === 0 ? 
                     <h5 style={{color:"darkgray"}}>
@@ -59,21 +59,21 @@ const CartScreen = ({ }) => {
                         <h4>Shopping Cart</h4>
                         <ListGroup variant='flush'>
                             {cartItems.map(item =>(
-                                <ListGroup.Item key={item.itemId} style={{width:"100%"}}>
+                                <ListGroup.Item key={item.itemId} style={{height:"100px"}}>
                                     <Row>
                                         <Col md={3}>
-                                            <Image src={item.image} alt={item.name} fluid rounded/>
+                                            <Image style={{height: "80px", marginTop: "2%"}} src={item.image} alt={item.name} fluid rounded/>
                                         </Col>
                                         <Col md={3}>
                                             <Link to={`/api/viewitems/${item.itemId}`}  style={{textDecoration: 'none', color: 'black'}}>
-                                                <div style={{marginTop:"40%"}}> {item.name}</div>
+                                                <div style={{marginTop:"15%"}}> {item.name}</div>
                                             </Link>
                                         </Col>
                                         <Col md={2}>
-                                            <div style={{marginTop:"65%"}}> ${item.price}</div>
+                                            <div style={{marginTop:"23%"}}> ${item.price}</div>
                                         </Col>
                                         <Col md={2}>
-                                        <Form.Control as='select' value={item.qty} style={{marginTop:"55%"}}
+                                        <Form.Control as='select' value={item.qty} style={{marginTop:"17%"}}
                                             onChange={(e) =>
                                             dispatch(addToCart(item.itemId, Number(e.target.value)))}>
                                             {[...Array(item.qtyInStock).keys()].map((x) => (
@@ -84,7 +84,7 @@ const CartScreen = ({ }) => {
                                         </Form.Control>
                                         </Col>
                                         <Col md={2}>
-                                            <Button type='button' variant='light' style={{marginTop:"55%"}}
+                                            <Button type='button' variant='light' style={{marginTop:"18%", marginLeft:"35%"}}
                                             onClick={() => removeFromCartHandler(item.itemId)}>
                                                 <i className='fa fas fa-trash'></i>
                                             </Button>
